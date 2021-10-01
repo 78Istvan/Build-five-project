@@ -12,8 +12,37 @@
     {% endblock %}
     <title>Recepies</title>
 </head>
-<body>
-   
+<body class=" amber lighten-5">
+   <header>
+       <!--main nav-->
+    <nav class=" amber lighten-2">
+        <div class="nav-extended">
+          <a href="{{ url_for('get_cooking') }}" class="brand-logo center">CoolRecipes</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+          <ul class="left hide-on-med-and-down">
+            <li class="active"><a href="{{ url_for('get_cooking') }}">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Add Recipes</a></li> 
+            <li><a href="#">Categories</a></li> 
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+        <!--mobile nav-->
+      <ul class="sidenav" id="mobile-demo">
+          <h4>CoolRecipes</h4>
+            <li class="active"><a href="{{ url_for('get_cooking') }}">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Add Recipes</a></li> 
+            <li><a href="#">Categories</a></li> 
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Register</a></li>
+      </ul>
+   </header>
+
     {% block content %}
     {% endblock %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
