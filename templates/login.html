@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row reg-card">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('registration') }}">
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
       <div class="card brown darken-1">
         <div class="card-content white-text">
             
-          <h4><span class="card-title center"><strong>Register</strong></span></h4>
+          <h4><span class="card-title center"><strong>Login</strong></span></h4>
             <!--first name-->
           <div class="row">
               <div class="input-field col s6 m6">
@@ -31,7 +31,7 @@
          </div>
          <!--register button-->
          <div class="row center">
-            <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-sign-in-alt in-icon"></i>Registration</button>
+            <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-sign-in-alt in-icon"></i>Login</button>
          </div>
 
         </div>

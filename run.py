@@ -42,17 +42,43 @@ def registration():
                 "is_admin": False}
         mongo.db.users.insert_one(registration)
 
-
         # put the new user into 'session' cookie
         session["user"] = request.form.get(
                 "first_name").lower(), request.form.get("last_name").lower()
 
         flash("Registration Successfull ")
+        return redirect("registration.html")
     return render_template("registration.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"first_name, last_name": request.form.get(
+                "first_name", "last_name").lower()})
+
+        if existing_user:
+            if check_password_hash(existing_user
+            ["password"], request.form.get("password")):
+                session["user"] = request.form.get(
+                    "first_name", "last_name").lower()
+                flash("Welcome, {}".format(request.form.get(
+                    "first_name", "last_name")))
+            else:
+                flash("Incorrect name and/or password")
+                return redirect(url_for("login"))
+
+        else:
+            flash("Incorrect name and/or password")
+            return redirect(url_for("login"))
+    return render_template("login.html")
+
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
 
