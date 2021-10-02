@@ -7,3 +7,12 @@ nav ul a {
 nav .brand-logo.left {
     color: #000000;
 }
+
+.btn, .btn-large, .btn-small {
+    background-color: chocolate;
+    
+}
+
+.in-icon {
+    margin-right: 5px;
+}
