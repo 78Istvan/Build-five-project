@@ -24,12 +24,35 @@ def get_cooking():
     return render_template("cooking.html", cooking=cooking)
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    return render_template("register.html")
+@app.route("/registration", methods=["GET", "POST"])
+def registration():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"first_name": request.form.get("first_name").lower(),
+             "last_name": request.form.get("last_name").lower()})
+
+        if existing_user:
+            flash("Username not free, choose another one")
+            return redirect(url_for("registration"))
+
+        registration = {
+                "first_name": request.form.get("first_name").lower(),
+                "last_name": request.form.get("last_name").lower(),
+                "password": generate_password_hash(request.form.get("password")),
+                "is_admin": False}
+        mongo.db.users.insert_one(registration)
+
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get(
+                "first_name").lower(), request.form.get("last_name").lower()
+
+        flash("Registration Successfull ")
+    return render_template("registration.html")
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+

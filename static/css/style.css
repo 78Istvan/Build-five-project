@@ -10,7 +10,8 @@ nav .brand-logo.left {
 
 .btn, .btn-large, .btn-small {
     background-color: chocolate;
-    
+    margin-bottom: 40px;
+
 }
 
 .in-icon {
