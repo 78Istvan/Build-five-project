@@ -117,6 +117,12 @@ To make a BBq is not only about food, it is about family time, frienship, and fu
 
 The main aim of my site to share recipes between people about them BBq experiences, because for this type of cooking there is no proper hand book, but everyone has them own home recipes, what works very well, but nobody else knows, so I can provide people to edit, upload, and submit them cooking phylosophy on this website.
 
+### Design
+
+* Color
+
+  * 
+
 
 
 
