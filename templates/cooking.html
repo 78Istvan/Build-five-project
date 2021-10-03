@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-
+        <div class=" extended">
+           <img src="{{ url_for('static', filename='images/bbq-bg6.jpg') }}" class="bg">
     {% for cook in cooking %}
         {{ cook.category_name }}<br>
         {{ cook.food_name }}<br>
@@ -8,7 +9,8 @@
         {{ cook.cooking_time }}<br>
         {{ cook.ingredients }}<br>
     {% endfor %}
-
+            </div>
+           
 {% endblock %}
 
        
