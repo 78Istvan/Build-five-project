@@ -123,6 +123,22 @@ The main aim of my site to share recipes between people about them BBq experienc
 
   * 
 
+* Styling 
+
+  * 
+
+### Wireframe
+
+* Phone size wireframe
+
+* Tablet size wireframe 
+
+* Desktop size wireframe 
+
+There are three pages on the picture: Home/Login/Your Account pages
+
+![alt text](static/images/bbq-2.png)
+
 
 
 
