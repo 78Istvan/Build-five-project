@@ -33,11 +33,12 @@ body, html {
       top: 0;
       left: 0;
       z-index: -10;
-      height: 100vh;
+      height: 100%;
       width: 100%;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      object-fit: cover;
     }
     
    
