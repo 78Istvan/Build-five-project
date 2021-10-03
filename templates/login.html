@@ -3,10 +3,10 @@
 
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-      <div class="card brown darken-1">
+      <div class="card">
         <div class="card-content white-text">
             
-          <h4><span class="card-title center"><strong>Login</strong></span></h4>
+          <h4><span class="card-title brown-text center"><strong>Login</strong></span></h4>
             <!--first name-->
             <div class="row">
               <div class="input-field col s12">
@@ -27,12 +27,15 @@
          <div class="row center">
             <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-sign-in-alt in-icon"></i>Login</button>
          </div>
-
+         <div class="row center">
+          <a href="{{ url_for('registration') }}"><button type="button" class="waves-effect waves-light btn-large"><i class="far fa-registered in-icon"></i>Registration</button>
+        </div>
         </div>
        </div>
       </div>
     </form>
   </div>
+      
             
 
 {% endblock %}

@@ -18,6 +18,7 @@ nav .brand-logo.left {
     margin-right: 5px;
 }
 
-.card {
-    color: aqua;
+a {
+    color: #ffffff;
+    margin-left: 0.5rem;
 }
