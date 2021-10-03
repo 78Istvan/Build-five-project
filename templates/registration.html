@@ -6,40 +6,34 @@
       <div class="card brown darken-1">
         <div class="card-content white-text">
             
-          <h4><span class="card-title center"><strong>Register</strong></span></h4>
+          <h4><span class="card-title center"><strong>Registration</strong></span></h4>
             <!--first name-->
           <div class="row">
-              <div class="input-field col s6 m6">
+              <div class="input-field col s12">
                  <i class="fas fa-user-plus prefix"></i>
-                 <input id="first_name"  name="first_name" type="text" class="validate" required>
-                 <label for="first_name">First Name</label>
+                 <input id="username"  name="username" type="text" class="validate" required>
+                 <label for="username">Username</label>
+                </div>
+                 <!--password-->
+                 <div class="row"></div>
+                  <div class="input-field col s12">
+                    <i class="fas fa-unlock-alt prefix"></i>
+                    <input id="password" name="password" type="password" class="validate" required>
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <!--register button-->
+                <div class="row center">
+                   <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-sign-in-alt in-icon"></i>Registration</button>
+                </div>
+       
+               </div>
               </div>
-            <!--last name-->
-              <div class="input-field col s6 m6">
-                <i class="fas fa-signature prefix"></i>
-                <input id="last_name" name="last_name" type="text" class="validate" required>
-                <label for="last_name">Last Name</label>
              </div>
-          </div>
-          <!--password-->
-          <div class="row"></div>
-           <div class="input-field col s12">
-             <i class="fas fa-unlock-alt prefix"></i>
-             <input id="password" name="password" type="password" class="validate" required>
-             <label for="password">Password</label>
-           </div>
+           </form>
          </div>
-         <!--register button-->
-         <div class="row center">
-            <button type="submit" class="waves-effect waves-light btn-large"><i class="fas fa-sign-in-alt in-icon"></i>Registration</button>
-         </div>
-
-        </div>
-       </div>
-      </div>
-    </form>
-  </div>
-            
-
-{% endblock %}
+                   
+       
+       {% endblock %}
+              </div>
         
