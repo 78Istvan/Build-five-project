@@ -24,6 +24,7 @@ def get_cooking():
     return render_template("cooking.html", cooking=cooking)
 
 
+# registration
 @app.route("/registration", methods=["GET", "POST"])
 def registration():
     if request.method == "POST":
@@ -47,6 +48,7 @@ def registration():
     return render_template("registration.html")
 
 
+# login
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -75,6 +77,7 @@ def login():
     return render_template("login.html")
 
 
+# profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
@@ -84,6 +87,7 @@ def profile(username):
         return render_template("profile.html", username=username)
 
     return render_template(url_for("login"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-
+<div class=" extended">
+  <img src="{{ url_for('static', filename='images/bbq-bg8.jpg') }}" class="bg">
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('registration') }}">
       <div class="card">
@@ -32,7 +33,7 @@
             </div>
           </form>
         </div>
-                
+        </div>
       {% endblock %}
              </div>
        
